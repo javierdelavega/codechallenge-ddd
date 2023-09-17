@@ -41,9 +41,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 WORKDIR /app/codechallenge
 
-CMD composer install --ignore-platform-reqs --no-scripts \
-    && php bin/console doctrine:database:create --no-interaction \
-    && php bin/console doctrine:migrations:migrate --no-interaction \    && php bin/console --env=test doctrine:database:create --no-interaction \
+CMD composer install --ignore-platform-reqs --no-scripts \    && php bin/console doctrine:database:create --no-interaction \
+    && php bin/console doctrine:migrations:migrate --no-interaction \    
+    && php bin/console --env=test doctrine:database:create --no-interaction \
     $$ php bin/console --env=test doctrine:schema:create --no-interaction \
     && php bin/console doctrine:fixtures:load --purge-exclusions=api_token --purge-exclusions=cart \
     --purge-exclusions=cart_items --purge-exclusions=doctrine_migrations_versions --purge-exclusions=item \
