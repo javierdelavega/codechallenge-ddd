@@ -48,7 +48,7 @@ services:
       timeout: 5s
       retries: 100
       start_period: 10s
-    container_name: 'codechallenge-back'
+    container_name: 'codechallenge-ddd'
     ports:
       - 8005:8005
     volumes:
