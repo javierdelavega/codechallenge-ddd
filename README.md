@@ -38,13 +38,13 @@ Para la realización de los tests:
 
 ## Pruebas performance ##
 
-Para realizar pruebas realistas de rendimiento, he subido la app a un servidor que tengo en clouding aunque la app está dockerizada y es un pequeño servidor compartido (Debian 11 64bit 0.5Vcores 1GB Ram) **se nota una gran diferencia de rendimiento** con el contenedor docker de desarrollo, al servirse desde nginx, y tener el laravel en producción, cache de composer, rutas, etc.
+Para realizar pruebas realistas de rendimiento, he subido la app a un servidor que tengo en clouding aunque la app está dockerizada y es un pequeño servidor compartido (Debian 11 64bit 0.5Vcores 1GB Ram) **se nota una gran diferencia de rendimiento** con el contenedor docker de desarrollo, al servirse desde nginx, y tener Symfony en producción, cache de composer, rutas, etc.
 
 * **https://codechallenge-back.smartidea.es** la API
-* **https://codechallenge-front.smartidea.es** el frontend de demostración
-* **https://codechallenge-front.smartidea.es/appdoc/** la documentación de la App.
-* **https://codechallenge-front.smartidea.es/apidoc/** la documentación y especificación de la api y sus endpoints.
-* **https://codechallenge-front.smartidea.es/test_reports/** el coverage report de los tests.
+* **https://codechallenge-front-ddd.smartidea.es** el frontend de demostración
+* **https://codechallenge-front-ddd.smartidea.es/appdoc/** la documentación de la App.
+* **https://codechallenge-front-ddd.smartidea.es/apidoc/** la documentación y especificación de la api y sus endpoints.
+* **https://codechallenge-front-ddd.smartidea.es/test_reports/** el coverage report de los tests.
 
 ## Diseño ##
 
