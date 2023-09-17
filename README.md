@@ -53,12 +53,12 @@ Para realizar pruebas realistas de rendimiento, he subido la app a un servidor q
 * Se ha diseñado siguiendo **D**omain **D**riven **D**esign. El dominio está desacoplado de los conceptos de insfraestructura como la persistencia o la API.
 * Las invariantes del dominio están gestionadas principalmente por las entidades, o lo más próximo a ellas posible.
 * Se definen los siguientes Bounded Contexts: **Auth** (gestión de usuarios), **Billing** (carrito y pedidos), **Catalog** (productos de la tienda).
-* Se han utilizado repositorios orientados a persistencia. Una aproximación mas purista hubiera sido con repositorios orientados a collecciones. Es un tema que estoy estudiando.
-* El cálculo del precio total del carrito lo realiza el servicio **UpdateCartTotalService** suscrito a un evento de dominio **CartContentChanged**. La entidad Cart publica ese evento cuando procede.
+* Se han utilizado repositorios orientados a persistencia. Una aproximación mas purista hubiera sido con repositorios orientados a colecciones. Es un tema que sigo probando.
+* El cálculo del precio total del carrito lo realiza el servicio **UpdateCartTotalService** suscrito a un evento de dominio **CartContentChanged**. La entidad **Cart** publica ese evento cuando procede.
 * No se persisten los eventos de dominio para simplificar y al no tener una aplicación práctica en esta demo.
 * La API funciona con conexiones stateless, y estarán autenticadas con un Bearer Token.
-* Para la gestión de los tokens de acceso y la autenticación se ha utilizado el Access Token Authentication de symfony, se han escrito los User Providers y Token Handlers necesarios.
-* Se ha desacoplado la entidad del dominio **User** de los aspectos de autenticación a través de la clase **SecurityUser**. 
+* Para la gestión de los tokens de acceso y la autenticación se ha utilizado el Access Token Authentication de Symfony, se han escrito User Providers y Token Handlers personalizados y adaptados a las necesidades.
+* Se ha desacoplado la entidad de dominio **User** de los aspectos de autenticación a través de la clase **SecurityUser**. 
 * Se obtendrá una lista de productos de la tienda desde una BD y el carrito solo permitirá añadir productos existentes en esa BD.
 * El carrito estará asociado a un usuario para que pueda guardar los artículos en la cesta y posteriormente realizar la compra.
 
