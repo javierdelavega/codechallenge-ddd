@@ -13,7 +13,7 @@ Misión: Desarrollar una API para la gestión de una cesta de la compra.
 
 Para la instalación del entorno de desarrollo y pruebas he preparado un contenedor docker. Para instalarlo:
 
-```git clone https://github.com/javierdelavega/codechallenge-back-ddd.git```
+```git clone https://github.com/javierdelavega/codechallenge-ddd.git```
 ```cd codechallenge-ddd```
 ```docker-compose up -d```
 
