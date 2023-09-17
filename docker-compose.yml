@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  db:
+    image: 'mariadb:latest'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'codechallenge'
+      MYSQL_USER: 'codechallenge'
+      MYSQL_PASSWORD: 'codechallenge'
+      #MYSQL_DATABASE: 'codechallenge'
+    volumes:
+      - "./mysql/:/var/lib/mysql"
+
+  phpmyadmin:
+    depends_on:
+      db:
+        condition: service_started
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: 'codechallenge'
+      UPLOAD_LIMIT: 300M
+  
+  frontend:
+    image: nginx:latest
+    restart: unless-stopped
+    ports:
+        - "8006:8080"
+    volumes:
+        - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+        - ./frontend:/app/frontend
+
+  app:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: 'codechallenge-symfony'
+    ports:
+      - 8005:8005
+    volumes:
+        - ./app:/app
+        - ./php.ini:/usr/local/etc/php/php.ini
