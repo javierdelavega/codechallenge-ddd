@@ -43,7 +43,8 @@ WORKDIR /app/codechallenge
 
 CMD composer install --ignore-platform-reqs --no-scripts \    
     && php bin/console doctrine:database:create --if-not-exists --no-interaction \
-    && php bin/console doctrine:migrations:migrate --no-interaction \    
+    && php bin/console doctrine:migrations:migrate --no-interaction \
+    && php bin/console --env=test doctrine:database:drop --if-exists \    
     && php bin/console --env=test doctrine:database:create --if-not-exists --no-interaction \
     && php bin/console --env=test doctrine:schema:create --no-interaction \
     && php bin/console doctrine:fixtures:load --purge-exclusions=api_token --purge-exclusions=cart \

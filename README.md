@@ -13,9 +13,9 @@ Misión: Desarrollar una API para la gestión de una cesta de la compra.
 
 Para la instalación del entorno de desarrollo y pruebas he preparado un contenedor docker. Para instalarlo:
 
-```git clone https://github.com/javierdelavega/codechallenge-ddd.git```
-```cd codechallenge-ddd```
-```docker-compose up -d```
+```git clone https://github.com/javierdelavega/codechallenge-ddd.git```  
+```cd codechallenge-ddd```  
+```docker-compose up -d --build```
 
 NOTA: La primera vez el contenedor tardará en iniciar completamente de 1-2 minutos, mientras realiza las tareas de preparación de la BD y la instalación de los paquetes con composer install.
 
