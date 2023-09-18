@@ -30,7 +30,7 @@ La documentación está accesible a través del servicio frontend:
 
 * **http://localhost:8006/appdoc/** la documentación de la App.
 * **http://localhost:8006/apidoc/** la documentación y especificación de la api y sus endpoints.
-* **http://localhost:8006/test-reports/** el coverage report de los tests.
+* **http://localhost:8006/test-report/** el coverage report de los tests.
 
 Para la realización de los tests:
 
@@ -44,7 +44,7 @@ Para realizar pruebas realistas de rendimiento, he subido la app a un servidor q
 * **https://codechallenge-front-ddd.smartidea.es** el frontend de demostración
 * **https://codechallenge-front-ddd.smartidea.es/appdoc/** la documentación de la App.
 * **https://codechallenge-front-ddd.smartidea.es/apidoc/** la documentación y especificación de la api y sus endpoints.
-* **https://codechallenge-front-ddd.smartidea.es/test-reports/** el coverage report de los tests.
+* **https://codechallenge-front-ddd.smartidea.es/test-report/** el coverage report de los tests.
 
 ## Diseño ##
 
