@@ -58,7 +58,7 @@ Para realizar pruebas realistas de rendimiento, he subido la app a un servidor q
 * No se persisten los eventos de dominio para simplificar y al no tener una aplicación práctica en esta demo.
 * La API funciona con conexiones stateless, y estarán autenticadas con un Bearer Token.
 * Para la gestión de los tokens de acceso y la autenticación se ha utilizado el Access Token Authentication de Symfony, se han escrito User Providers y Token Handlers personalizados y adaptados a las necesidades.
-* Se ha desacoplado la entidad de dominio **User** de los aspectos de autenticación a través de la clase **SecurityUser**. 
+* Se ha desacoplado la entidad de dominio **User** de los aspectos de autenticación a través de la clase de infraestructura **SecurityUser** siendo esta la que trata con el sistema de seguridad. 
 * Se obtendrá una lista de productos de la tienda desde una BD y el carrito solo permitirá añadir productos existentes en esa BD.
 * El carrito estará asociado a un usuario para que pueda guardar los artículos en la cesta y posteriormente realizar la compra.
 
