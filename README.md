@@ -44,7 +44,7 @@ Para realizar pruebas realistas de rendimiento, he subido la app a un servidor q
 * **https://codechallenge-front-ddd.smartidea.es** el frontend de demostración
 * **https://codechallenge-front-ddd.smartidea.es/appdoc/** la documentación de la App.
 * **https://codechallenge-front-ddd.smartidea.es/apidoc/** la documentación y especificación de la api y sus endpoints.
-* **https://codechallenge-front-ddd.smartidea.es/test_reports/** el coverage report de los tests.
+* **https://codechallenge-front-ddd.smartidea.es/test-reports/** el coverage report de los tests.
 
 ## Diseño ##
 
